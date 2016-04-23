@@ -18,7 +18,7 @@ Requirements:
 The script works as below:
 
 * It reads one line at a time in the input file, and will try to find one (and exactly one) definition for it.
-* It "prepares" each entry by "reverse-conjugating" it. For example, if it sees 行った, it converts it to 行く first (because EDICT doesn't have 行った). Note that it would first try to find the reverse-conjugated form before the original one. There are some additional look-up logic, but this is the main one.
+* It prepares each entry by "reverse-conjugating" it. For example, if it sees 行った, it converts it to 行く first (because EDICT doesn't have 行った). Note that it would first try to find the reverse-conjugated form before the original one. There are some additional look-up logic, but this is the main one.
 * Note that the look up is greedy---starting from the beginning of the entry, it will try to match an entry in EDICT that is as long as possible. This allows us to match longer entries such as idioms. For example, EDICT has an entry for 腹をくくる. The script will try to look up the meaning of the whole entry (and it will find it), instead of simply returning the definition of 腹.
 * The script will then print out (and save in a file) the definitions in a format that Memrise can use. That is, the user can copy the output from here and paste it directly in Memrise to create a new module.
 
